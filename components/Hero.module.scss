@@ -13,16 +13,44 @@
     font-weight: 500;
   }
 
-  .colorModeBtn {
-    margin-bottom: 100px;
+  .moon {
     margin-left: auto;
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
     color: #333;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    right: 25px;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .sun {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    right: 25px;
+    color: #fff;
+  }
+
+  .appear {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    max-height: 25px;
   }
 
   .heroImg {
+    margin-top: 125px;
     width: 100%;
   }
 
