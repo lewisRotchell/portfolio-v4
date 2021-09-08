@@ -4,31 +4,28 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: red;
+  background-color: transparent;
   z-index: 10;
   position: fixed;
   top: 0;
-  p {
-    cursor: pointer;
-  }
 }
 
 .aside {
-  width: 300px;
-  position: absolute;
+  width: 0;
+  position: fixed;
   bottom: 0;
   top: 0;
-  right: -300px;
+  right: 0;
   height: 100vh;
   background-color: blue;
-  transition: right 0.5s;
-  -webkit-backface-visibility: hidden;
+  transition: all 0.5s;
   overflow-x: hidden;
+  visibility: hidden;
 }
 
 .active {
-  right: 0;
-  transition: right 0.5s;
-  -webkit-backface-visibility: hidden;
+  width: 250px;
+  transition: all 0.5s;
   overflow-x: hidden;
+  visibility: visible;
 }

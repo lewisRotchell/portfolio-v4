@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { ThemeContext } from "../context/ThemeProvider";
 import classes from "./Header.module.scss";
 
 interface HeaderProps {}
@@ -21,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
 
   return (
     <>
-      <nav className={classes.nav}>
+      <nav className={`${classes.nav} container`}>
         <button onClick={() => setActive(!active)}>menu</button>
       </nav>
 
