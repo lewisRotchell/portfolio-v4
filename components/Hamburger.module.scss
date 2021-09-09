@@ -48,7 +48,7 @@
 }
 
 .hamburger:focus-visible {
-  box-shadow: 0 0 0 5px var(--primary), 0 0 0 8px $primary;
+  box-shadow: 0 0 0 5px #fff, 0 0 0 8px $primary;
   outline: none;
 }
 
