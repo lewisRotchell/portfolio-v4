@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Hamburger } from "../components/Hamburger";
 import { ThemeContext } from "../context/ThemeProvider";
 import classes from "./Header.module.scss";
 
@@ -23,15 +24,25 @@ export const Header: React.FC<HeaderProps> = ({}) => {
   return (
     <>
       <nav className={`${classes.nav} container`}>
-        <button onClick={() => setActive(!active)}>menu</button>
+        {/* <button onClick={() => setActive(!active)}>menu</button> */}
+        <Hamburger active={active} setActive={setActive} />
       </nav>
 
       <aside className={`${classes.aside} ${active ? classes.active : ""}`}>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>Contact</li>
-            <li>Projects</li>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </nav>
       </aside>

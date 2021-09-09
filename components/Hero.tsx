@@ -29,13 +29,10 @@ export const Hero: React.FC<HeroProps> = ({}) => {
         alt="man waving"
       />
       <div className={classes.heroDetails}>
-        {/* <span className={classes.introText}>Hello, my name is</span> */}
         <h1 className={classes.title}>Hi, I'm Lewis</h1>
         <p className={classes.lead}>
           I'm a Sheffield (UK) based{" "}
-          <span className={classes.leadEmphasis}>
-            full stack web developer{" "}
-          </span>
+          <span className={classes.leadEmphasis}>web developer </span>
           specialising in building{" "}
           <span className={classes.leadEmphasis}>fast</span>,{" "}
           <span className={classes.leadEmphasis}>secure</span> and

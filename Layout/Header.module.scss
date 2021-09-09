@@ -1,3 +1,4 @@
+@import "../styles/abstracts/variables";
 .nav {
   height: 70px;
   width: 100%;
@@ -6,7 +7,7 @@
   align-items: center;
   background-color: transparent;
   z-index: 10;
-  position: fixed;
+  position: absolute;
   top: 0;
 }
 
@@ -17,15 +18,25 @@
   top: 0;
   right: 0;
   height: 100vh;
-  background-color: blue;
   transition: all 0.5s;
   overflow-x: hidden;
   visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  padding-top: 250px;
+  color: $primary;
+  border-left: 1px solid $primary;
+
+  li {
+    padding-bottom: 30px;
+  }
 }
 
 .active {
   width: 250px;
   transition: all 0.5s;
+
   overflow-x: hidden;
   visibility: visible;
 }

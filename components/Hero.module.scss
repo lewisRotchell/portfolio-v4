@@ -26,6 +26,7 @@
     right: 25px;
     max-height: 0;
     overflow: hidden;
+    padding: 0;
   }
 
   .sun {
@@ -40,6 +41,7 @@
     position: absolute;
     right: 25px;
     color: #fff;
+    padding: 0;
   }
 
   .appear {
@@ -74,7 +76,7 @@
   }
 
   .leadEmphasis {
-    color: #319795;
+    color: $primary;
 
     font-size: 1.1rem;
   }

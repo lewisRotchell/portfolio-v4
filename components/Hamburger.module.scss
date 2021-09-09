@@ -1,0 +1,77 @@
+@import "../styles/abstracts/variables";
+
+.hamburger {
+  width: auto;
+  height: 19px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  z-index: 999999;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger::before {
+  content: "";
+  position: absolute;
+  transform: translateY(-7px);
+  width: 20px;
+  height: 3px;
+  background-color: $primary;
+  transform-origin: 46% 60%;
+  -webkit-transition: -webkit-transform 0.3 ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.middleLine {
+  width: 20px;
+  height: 3px;
+  background-color: $primary;
+  -webkit-transition: -webkit-all 0.3 ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.hamburger::after {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(7px);
+  transform: translateY(7px);
+  width: 20px;
+  height: 3px;
+  background-color: $primary;
+  transform-origin: 50%;
+  -webkit-transition: -webkit-transform 0.3 ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.hamburger:focus-visible {
+  box-shadow: 0 0 0 5px var(--primary), 0 0 0 8px $primary;
+  outline: none;
+}
+
+/* closed menu turns to X */
+.hamburger.closeMenu::before {
+  -webkit-transform: rotate(45deg) scaleX(1.25);
+  transform: rotate(45deg) scaleX(1.25);
+}
+
+.middleLine.closeMenu {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.hamburger.closeMenu::after {
+  -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+  transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+}
+
+@media (min-width: 1000px) {
+  .hamburger {
+    display: none;
+  }
+}
