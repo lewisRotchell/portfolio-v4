@@ -39,3 +39,40 @@
   overflow-x: hidden;
   visibility: visible;
 }
+
+.moon {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  left: 25px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  color: $primary;
+}
+
+.sun {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  left: 25px;
+  color: $primary;
+  padding: 0;
+}
+
+.appear {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  max-height: 25px;
+}

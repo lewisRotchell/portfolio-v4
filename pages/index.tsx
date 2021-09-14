@@ -7,7 +7,6 @@ export default function Home() {
   const { theme } = useContext(ThemeContext);
   useEffect(() => {
     const body = document.querySelector("body");
-    console.log(theme);
     body!.className = theme;
   });
   return (

@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeProvider";
 import classes from "./Hero.module.scss";
-import { BsMoon } from "react-icons/bs";
-import { BsSun } from "react-icons/bs";
 import { Button } from "./Button";
 
 interface HeroProps {}
@@ -11,18 +9,6 @@ export const Hero: React.FC<HeroProps> = ({}) => {
   const { toggleTheme, theme } = useContext(ThemeContext);
   return (
     <section className={`${classes.hero} container`}>
-      <button
-        onClick={() => toggleTheme()}
-        className={`${classes.moon} ${theme === "light" ? classes.appear : ""}`}
-      >
-        <BsMoon />
-      </button>
-      <button
-        onClick={() => toggleTheme()}
-        className={`${classes.sun} ${theme === "dark" ? classes.appear : ""}`}
-      >
-        <BsSun />
-      </button>
       <img
         className={classes.heroImg}
         src="/images/hero-img.svg"
@@ -38,8 +24,6 @@ export const Hero: React.FC<HeroProps> = ({}) => {
           <span className={classes.leadEmphasis}>secure</span> and
           <span className={classes.leadEmphasis}> responsive</span> websites.
         </p>
-      </div>
-      <div>
         <Button style={classes.buttonA}>View Projects</Button>
         <Button>Contact Me</Button>
       </div>

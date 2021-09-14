@@ -197,10 +197,10 @@ html {
   -moz-scrollbar-width: thin;
   -ms-scrollbar-width: thin;
   scrollbar-width: thin;
-  -webkit-scrollbar-color: var(--dark-slate) var(--navy);
-  -moz-scrollbar-color: var(--dark-slate) var(--navy);
-  -ms-scrollbar-color: var(--dark-slate) var(--navy);
-  scrollbar-color: var(--dark-slate) var(--navy);
+  -webkit-scrollbar-color: #f8f8f8 $primary;
+  -moz-scrollbar-color: #f8f8f8 $primary;
+  -ms-scrollbar-color: #f8f8f8 $primary;
+  scrollbar-color: #f8f8f8 $primary;
 }
 
 /*!sc*/
@@ -210,12 +210,12 @@ body::-webkit-scrollbar {
 
 /*!sc*/
 body::-webkit-scrollbar-track {
-  background: var(--navy);
+  background: #f8f8f8;
 }
 
 /*!sc*/
 body::-webkit-scrollbar-thumb {
-  background-color: var(--dark-slate);
-  border: 3px solid var(--navy);
+  background-color: $primary;
+  border: 5px solid #f8f8f8;
   border-radius: 10px;
 }
