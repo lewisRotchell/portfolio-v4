@@ -24,8 +24,10 @@ export const Hero: React.FC<HeroProps> = ({}) => {
           <span className={classes.leadEmphasis}>secure</span> and
           <span className={classes.leadEmphasis}> responsive</span> websites.
         </p>
-        <Button style={classes.buttonA}>View Projects</Button>
-        <Button>Contact Me</Button>
+        <div className={classes.buttons}>
+          <Button style={classes.buttonA}>View Projects</Button>
+          <Button>Contact Me</Button>
+        </div>
       </div>
     </section>
   );

@@ -8,6 +8,25 @@ import { ThemeContext } from "../context/ThemeProvider";
 
 interface HeaderProps {}
 
+const navLinks = [
+  {
+    name: "Home",
+    link: "#home",
+  },
+  {
+    name: "About",
+    link: "#about",
+  },
+  {
+    name: "Projects",
+    link: "#projects",
+  },
+  {
+    name: "Contact",
+    link: "#contact",
+  },
+];
+
 export const Header: React.FC<HeaderProps> = ({}) => {
   const [active, setActive] = useState(false);
 
@@ -57,18 +76,11 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <aside className={`${classes.aside} ${active ? classes.active : ""}`}>
           <nav>
             <ul>
-              <li onClick={() => setActive(false)}>
-                <a href="#home">Home</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
+              {navLinks.map((item, index) => (
+                <li key={index} onClick={() => setActive(false)}>
+                  <a href={item.link}>{item.name}</a>
+                </li>
+              ))}
             </ul>
           </nav>
         </aside>
