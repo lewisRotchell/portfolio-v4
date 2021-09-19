@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         body?.classList.remove("stop-scroll");
         setActive(false);
       });
-    } else if (!active && main?.classList.contains("active")) {
+    } else {
       main?.classList.remove("active");
       body?.classList.remove("stop-scroll");
     }
@@ -57,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <aside className={`${classes.aside} ${active ? classes.active : ""}`}>
           <nav>
             <ul>
-              <li>
+              <li onClick={() => setActive(false)}>
                 <a href="#home">Home</a>
               </li>
               <li>

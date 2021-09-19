@@ -1,135 +1,21 @@
-//reset
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-//end reset
+@import "normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
-@import "./abstracts/variables";
+
+:root {
+  //Define colours
+  --teal: #319795;
+  --black: #333;
+  --white: #fff;
+  --off-white: #f8f8f8;
+  --dark-blue: #1a202c;
+
+  //Define colour intentions
+  --background: var(--off-white);
+  --background-dark: var(--dark-blue);
+  --text: var(--black);
+  --text-dark: var(--white);
+  --primary: var(--teal);
+}
 html,
 body {
   font-family: "Montserrat", sans-serif;
@@ -137,10 +23,8 @@ body {
   height: 100%;
   overflow-x: hidden;
 
-  color: $light-mode-text;
-  background-color: $light-mode-bg;
-  // background-color: #1a202c;
-  // color: #fff;
+  color: var(--text);
+  background-color: var(--background);
 }
 
 a {
@@ -163,6 +47,14 @@ p {
   line-height: 1.6;
 }
 
+li {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 .active {
   right: 250px;
   transition: right 0.5s;
@@ -172,7 +64,7 @@ p {
 
 .stop-scroll {
   overflow-y: hidden;
-  position: relative;
+  // position: relative;
 }
 
 .container {
@@ -180,42 +72,42 @@ p {
 }
 
 .light {
-  color: $light-mode-text;
-  background-color: $light-mode-bg;
+  --text: var(--text);
+  --background: var(--background);
   transition: ALL 0.2s ease-in;
 }
 
 .dark {
-  color: $dark-mode-text;
-  background-color: $dark-mode-bg;
+  --text: var(--text-dark);
+  --background: var(--background-dark);
   transition: ALL 0.2s ease-in;
 }
 
 //scrollbar
-html {
-  -webkit-scrollbar-width: thin;
-  -moz-scrollbar-width: thin;
-  -ms-scrollbar-width: thin;
-  scrollbar-width: thin;
-  -webkit-scrollbar-color: #f8f8f8 $primary;
-  -moz-scrollbar-color: #f8f8f8 $primary;
-  -ms-scrollbar-color: #f8f8f8 $primary;
-  scrollbar-color: #f8f8f8 $primary;
-}
+// html {
+//   -webkit-scrollbar-width: thin;
+//   -moz-scrollbar-width: thin;
+//   -ms-scrollbar-width: thin;
+//   scrollbar-width: thin;
+//   -webkit-scrollbar-color: #f8f8f8 $primary;
+//   -moz-scrollbar-color: #f8f8f8 $primary;
+//   -ms-scrollbar-color: #f8f8f8 $primary;
+//   scrollbar-color: #f8f8f8 $primary;
+// }
 
 /*!sc*/
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 4px;
 }
 
 /*!sc*/
 body::-webkit-scrollbar-track {
-  background: #f8f8f8;
+  border-radius: 10px;
 }
 
 /*!sc*/
 body::-webkit-scrollbar-thumb {
-  background-color: $primary;
-  border: 5px solid #f8f8f8;
-  border-radius: 10px;
+  background-color: red;
+  border: 4px solid var(--primary);
+  border-radius: 16px;
 }
