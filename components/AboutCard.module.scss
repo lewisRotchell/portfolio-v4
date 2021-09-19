@@ -1,13 +1,22 @@
 .card {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
   .image {
     height: 48px;
-    fill: red;
-    path {
-      fill: red;
-    }
+    margin-bottom: 16px;
+  }
 
-    svg {
-      color: red;
-    }
+  .title {
+    margin-bottom: 0;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .text {
+    font-size: 1rem;
+    margin-top: 8px;
   }
 }

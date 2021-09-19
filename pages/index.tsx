@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeProvider";
 import { Hero } from "../components/Hero";
 import { About } from "../components/About";
+import { Projects } from "../components/Projects";
 
 export default function Home() {
   // const styles = getStyles(mode);
@@ -14,6 +15,7 @@ export default function Home() {
     <main>
       <Hero />
       <About />
+      <Projects />
     </main>
   );
 }
