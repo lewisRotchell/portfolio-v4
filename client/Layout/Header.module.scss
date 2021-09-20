@@ -1,0 +1,77 @@
+.nav {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: transparent;
+  z-index: 10;
+  position: relative;
+  top: 0;
+}
+
+.aside {
+  width: 0;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  transition: all 0.5s;
+  overflow-x: hidden;
+  visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  padding-top: 250px;
+  color: var(--primary);
+  border-left: 1px solid var(--primary);
+
+  li {
+    padding-bottom: 30px;
+  }
+}
+
+.active {
+  width: 250px;
+  transition: all 0.5s;
+  overflow-x: hidden;
+  visibility: visible;
+}
+
+.moon {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  left: 25px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  color: var(--primary);
+}
+
+.sun {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  left: 25px;
+  color: var(--primary);
+  padding: 0;
+}
+
+.appear {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  max-height: 25px;
+}
