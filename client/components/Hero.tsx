@@ -9,13 +9,15 @@ export const Hero: React.FC<HeroProps> = ({}) => {
   const { toggleTheme, theme } = useContext(ThemeContext);
   return (
     <section className={`${classes.hero} container`}>
-      <img
+      {/* <img
         className={classes.heroImg}
         src="/images/hero-img.svg"
         alt="man waving"
-      />
+      /> */}
       <div className={classes.heroDetails}>
-        <h1 className={classes.title}>Hi, I'm Lewis</h1>
+        {/* <h1 className={classes.title}>Hi</h1> */}
+        <h1 className={classes.title}>Hi, I'm Lewis,</h1>
+        <h1 className={classes.title}>Web Developer</h1>
         <p className={classes.lead}>
           I'm a Sheffield (UK) based{" "}
           <span className={classes.leadEmphasis}>web developer </span>

@@ -1,15 +1,22 @@
 @import "../styles//abstracts/mixins";
 .hero {
-  // min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
+
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  justify-content: center;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @include tallScreen {
+    padding-bottom: 100px;
+  }
 
   .heroDetails {
-    margin-top: 50px;
+    // margin-top: 50px;
     font-weight: 500;
-    max-width: 385px;
+    // max-width: 385px;
+    // max-width: 600px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -18,6 +25,8 @@
   .heroImg {
     width: 100%;
     max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .introText {
@@ -27,10 +36,18 @@
   }
 
   .title {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 24px;
+    margin-bottom: 12px;
+
+    @include tablet {
+      font-size: 4rem;
+    }
+
+    @include large {
+      font-size: 5.5rem;
+    }
   }
 
   .lead {

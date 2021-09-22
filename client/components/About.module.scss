@@ -1,7 +1,27 @@
-.about {
-  margin-top: 100px;
-}
+@import "../styles/abstracts/mixins";
 
-.icon {
-  width: 3rem;
+.about {
+  // margin-top: 100px;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet {
+    min-height: 100vh;
+    padding-top: 60px;
+  }
+
+  .cards {
+    @include tablet {
+      padding-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      // gap: 200px;
+      // grid-column-gap: 250px;
+      grid-row-gap: 100px;
+      width: 100%;
+      justify-items: center;
+      align-items: center;
+    }
+  }
 }

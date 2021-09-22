@@ -25,25 +25,35 @@ const aboutData = [
     description:
       "I make sure that my websites follow accessibility guidelines so that they are usuable for everyone.",
   },
+  {
+    image: "/images/pencil.svg",
+    alt: "pencil",
+    title: "CMS",
+    description:
+      "I can hook your website to a content management system so you can edit your own content.",
+  },
 ];
 
 interface AboutProps {}
 
 export const About: React.FC<AboutProps> = ({}) => {
   return (
-    <section className={`${classes.about} container`}>
+    <section id="about" className={`${classes.about} container`}>
       <h2>What I do</h2>
 
       <div className="bottom-line"></div>
-      {aboutData.map((data, index) => (
-        <AboutCard
-          key={index}
-          image={data.image}
-          alt={data.alt}
-          title={data.title}
-          description={data.description}
-        />
-      ))}
+
+      <div className={classes.cards}>
+        {aboutData.map((data, index) => (
+          <AboutCard
+            key={index}
+            image={data.image}
+            alt={data.alt}
+            title={data.title}
+            description={data.description}
+          />
+        ))}
+      </div>
     </section>
   );
 };

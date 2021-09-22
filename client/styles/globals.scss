@@ -4,7 +4,7 @@
 :root {
   //Define colours
   --teal: #319795;
-  --black: #333;
+  --black: #222;
   --white: #fff;
   --off-white: #f8f8f8;
   --dark-blue: #1a202c;
@@ -53,6 +53,20 @@ h6 {
 h2 {
   font-size: 1.5rem;
   margin-bottom: 16px;
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+
+  @include large {
+    font-size: 3.5rem;
+  }
+}
+
+h3 {
+  @include tablet {
+    font-size: 1.5rem;
+  }
 }
 
 a {
@@ -94,6 +108,12 @@ button {
   @include mobile {
     padding: 0 25px;
   }
+  @include tablet {
+    padding: 0 50px;
+  }
+  @include large {
+    padding: 0 250px;
+  }
 }
 
 .light {
@@ -115,6 +135,10 @@ button {
   margin-bottom: 32px;
   margin-left: auto;
   margin-right: auto;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
 }
 
 //scrollbar

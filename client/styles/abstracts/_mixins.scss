@@ -3,3 +3,21 @@
     @content;
   }
 }
+
+@mixin tallScreen {
+  @media only screen and (min-height: 654px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}

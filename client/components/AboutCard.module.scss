@@ -1,18 +1,33 @@
+@import "../styles/abstracts/mixins";
+
 .card {
   &:not(:last-child) {
     margin-bottom: 32px;
   }
 
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    height: 100%;
+  }
+
+  max-width: 276px;
+
   .image {
     height: 48px;
     margin-bottom: 16px;
+
+    @include tablet {
+      height: 60px;
+    }
   }
 
   .title {
     margin-bottom: 0;
     color: var(--text);
     font-weight: 500;
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
   }
 
   .text {
