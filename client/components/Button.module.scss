@@ -1,3 +1,5 @@
+@import "../styles//abstracts/mixins";
+
 .button {
   display: inline-flex;
   justify-content: center;
@@ -11,4 +13,8 @@
   color: var(--primary);
   font-weight: 600;
   background-color: transparent;
+
+  @include tablet {
+    width: 200px;
+  }
 }

@@ -1,8 +1,9 @@
+@import "../styles/abstracts/mixins";
 .hamburger {
   width: auto;
   height: 19px;
   position: absolute;
-  right: 25px;
+  right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +12,13 @@
   z-index: 999999;
   cursor: pointer;
   padding: 0;
+
+  @include mobile {
+    right: 25px;
+  }
+  @include tablet {
+    display: none;
+  }
 }
 
 .hamburger::before {
@@ -67,10 +75,4 @@
 .hamburger.closeMenu::after {
   -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
   transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-}
-
-@media (min-width: 1000px) {
-  .hamburger {
-    display: none;
-  }
 }

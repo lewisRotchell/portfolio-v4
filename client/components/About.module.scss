@@ -9,6 +9,7 @@
   @include tablet {
     min-height: 100vh;
     padding-top: 60px;
+    text-align: left;
   }
 
   .cards {
@@ -17,7 +18,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       // gap: 200px;
-      // grid-column-gap: 250px;
+      grid-column-gap: 30px;
       grid-row-gap: 100px;
       width: 100%;
       justify-items: center;

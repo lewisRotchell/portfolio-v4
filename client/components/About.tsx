@@ -39,7 +39,7 @@ interface AboutProps {}
 export const About: React.FC<AboutProps> = ({}) => {
   return (
     <section id="about" className={`${classes.about} container`}>
-      <h2>What I do</h2>
+      <h2>How can I help?</h2>
 
       <div className="bottom-line"></div>
 

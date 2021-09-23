@@ -16,9 +16,14 @@ export const AboutCard: React.FC<AboutCardProps> = ({
 }) => {
   return (
     <article className={classes.card}>
-      <img className={classes.image} src={image} alt={alt} />
-      <h3 className={classes.title}>{title}</h3>
-      <p className={classes.text}>{description}</p>
+      <div className={classes.imageContainer}>
+        <img className={classes.image} src={image} alt={alt} />
+      </div>
+
+      <div className={classes.textContainer}>
+        <h3 className={classes.title}>{title}</h3>
+        <p className={classes.text}>{description}</p>
+      </div>
     </article>
   );
 };

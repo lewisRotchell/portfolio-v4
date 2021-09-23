@@ -20,6 +20,10 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+
+    @include tablet {
+      text-align: left;
+    }
   }
 
   .heroImg {
@@ -52,6 +56,14 @@
 
   .lead {
     margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   .leadEmphasis {
@@ -65,14 +77,22 @@
     align-items: center;
     @include mobile {
       flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    @include tablet {
+      justify-content: start;
     }
   }
 
   .buttonA {
     margin-bottom: 16px;
     @include mobile {
-      margin-right: 16px;
       margin-bottom: 0;
+    }
+
+    @include tablet {
+      margin-right: 64px;
     }
   }
 }

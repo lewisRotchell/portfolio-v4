@@ -1,5 +1,7 @@
+@import "../styles/abstracts/mixins";
+
 .nav {
-  height: 70px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -39,7 +41,7 @@
   visibility: visible;
 }
 
-.moon {
+.themeBtn {
   margin-left: auto;
   background-color: transparent;
   border: none;
@@ -48,25 +50,23 @@
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   position: absolute;
-  left: 25px;
+  left: 10px;
   max-height: 0;
   overflow: hidden;
   padding: 0;
   color: var(--primary);
-}
-
-.sun {
-  margin-left: auto;
-  background-color: transparent;
-  border: none;
-  font-size: 1.5rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  position: absolute;
-  left: 25px;
-  color: var(--primary);
-  padding: 0;
+  @include mobile {
+    left: 25px;
+  }
+  @include tablet {
+    left: 50px;
+  }
+  @include large {
+    left: 120px;
+  }
+  @include xl {
+    left: 250px;
+  }
 }
 
 .appear {
@@ -74,4 +74,25 @@
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
   max-height: 25px;
+}
+
+.navList {
+  display: none;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: 500;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+
+  @include tablet {
+    display: flex;
+  }
 }

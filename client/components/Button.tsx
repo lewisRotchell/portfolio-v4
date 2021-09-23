@@ -16,7 +16,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   if ((type = "submit")) {
     return (
-      <button type="submit" className={`${classes.button} ${style}`}>
+      <button type="submit" className={`${classes.button}  ${style}`}>
         {children}
       </button>
     );

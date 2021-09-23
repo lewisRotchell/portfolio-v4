@@ -56,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <nav className={`${classes.nav} container`}>
           <button
             onClick={() => toggleTheme()}
-            className={`${classes.moon} ${
+            className={`${classes.themeBtn} ${
               theme === "light" ? classes.appear : ""
             }`}
           >
@@ -64,12 +64,19 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           </button>
           <button
             onClick={() => toggleTheme()}
-            className={`${classes.sun} ${
+            className={`${classes.themeBtn} ${
               theme === "dark" ? classes.appear : ""
             }`}
           >
             <BsSun />
           </button>
+          <ul className={classes.navList}>
+            {navLinks.map((item, index) => (
+              <li key={index} onClick={() => setActive(false)}>
+                <a href={item.link}>{item.name}</a>
+              </li>
+            ))}
+          </ul>
           <Hamburger active={active} setActive={setActive} />
         </nav>
 
