@@ -17,12 +17,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <article className={classes.projectCard}>
-      <img className={classes.image} src={image} alt={alt} />
-      <h3 className={classes.title}>{title}</h3>
-      <p className={classes.text}>{description}</p>
-      <div className={classes.buttons}>
-        <Button style={classes.buttonA}>View Project</Button>
-        <Button>View Code</Button>
+      <div className={classes.imageContainer}>
+        <img className={classes.image} src={image} alt={alt} />
+      </div>
+      <div className={classes.details}>
+        <h3 className={classes.title}>{title}</h3>
+        <p className={classes.text}>{description}</p>
+        <div className={classes.buttons}>
+          <Button style={classes.buttonA}>View Project</Button>
+          <Button>View Code</Button>
+        </div>
       </div>
     </article>
   );

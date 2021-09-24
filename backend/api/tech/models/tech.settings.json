@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teches",
+  "info": {
+    "name": "tech"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "projects": {
+      "via": "teches",
+      "collection": "project"
+    }
+  }
+}

@@ -1,7 +1,6 @@
 @import "../styles/abstracts/mixins";
 
 .about {
-  // margin-top: 100px;
   padding-top: 80px;
   display: flex;
   flex-direction: column;
@@ -21,7 +20,14 @@
       grid-column-gap: 30px;
       grid-row-gap: 100px;
       width: 100%;
+
+      &:nth-child(even) {
+        justify-items: right;
+        color: blue;
+      }
+
       justify-items: center;
+
       align-items: center;
     }
   }
